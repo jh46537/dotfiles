@@ -1,0 +1,11 @@
+[user]
+	name = Alex Hsu
+	email = alex.hsu@utexas.edu
+[core]
+	editor = vim
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
+[rebase]
+	stat = true
