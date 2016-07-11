@@ -59,13 +59,11 @@ set cursorline
 set scrolloff=2
 
 " change spell check color
-"hi clear SpellBad
-"hi SpellBad cterm=bold,italic ctermfg=red
-"hi clear SpellCap
-"hi SpellCap cterm=bold,italic ctermfg=blue
-
-" disable highlighting during search
-" highlight Search cterm=NONE ctermfg=NONE ctermbg=NONE
+hi clear SpellBad
+hi SpellBad     ctermfg=red ctermbg=232 cterm=bold,reverse
+hi SpellCap     ctermfg=red ctermbg=232 cterm=bold,reverse
+hi SpellLocal   ctermfg=red ctermbg=232 cterm=bold,reverse
+hi SpellRare    ctermfg=red ctermbg=232 cterm=bold,reverse
 
 " search
 set incsearch
