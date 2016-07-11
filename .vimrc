@@ -1,6 +1,22 @@
 " set timeout
 set timeoutlen=1000 ttimeoutlen=0
 
+" set leader
+map <space> <leader>
+set showcmd
+
+" leader things
+" easy unhighlighting
+nnoremap <leader>/ :noh<CR>
+" enable replace of word under cursor (shortcut \s)
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+" enable replace of search term
+nnoremap <leader>r :%s//
+" write
+nnoremap <leader>w :w<cr>
+" quit
+nnoremap <leader>q :q<cr>
+
 " enable mouse
 set mouse=a
 
@@ -26,11 +42,8 @@ set softtabstop=4
 set expandtab
 set cindent
 
-" enable replace of word under cursor (shortcut \s)
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-
 " change Y behavior to yank from cursor to end of line
-nnoremap Y y$
+"nnoremap Y y$
 
 " trick tmux into using vim background color
 set t_ut=
@@ -46,10 +59,10 @@ set cursorline
 set scrolloff=2
 
 " change spell check color
-hi clear SpellBad
-hi SpellBad cterm=bold,italic ctermfg=red
-hi clear SpellCap
-hi SpellCap cterm=bold,italic ctermfg=blue
+"hi clear SpellBad
+"hi SpellBad cterm=bold,italic ctermfg=red
+"hi clear SpellCap
+"hi SpellCap cterm=bold,italic ctermfg=blue
 
 " disable highlighting during search
 " highlight Search cterm=NONE ctermfg=NONE ctermbg=NONE

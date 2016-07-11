@@ -9,7 +9,8 @@ case $- in
 esac
 
 #### CUSTOM ####
-LANG=en_US.UTF-8
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 bind '"\C-b": beginning-of-line'
 export EDITOR=vim
 export VISUAL=vim
