@@ -1,15 +1,19 @@
 " set timeout
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=500 ttimeoutlen=0
 
 " set leader
 map <space> <leader>
 set showcmd
 
+" escape mappings
+nnoremap <tab><tab> <esc>
+vnoremap <tab><tab> <esc>gV
+onoremap <tab><tab> <esc>
+inoremap <tab><tab> <esc>`^
+
 " leader things
 " easy unhighlighting
-nnoremap <leader>/ :noh<CR>
-" enable replace of word under cursor (shortcut \s)
-nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+nnoremap <leader>/ :noh<cr>
 " enable replace of search term
 nnoremap <leader>r :%s//
 " write
@@ -17,11 +21,13 @@ nnoremap <leader>w :w<cr>
 " quit
 nnoremap <leader>q :q<cr>
 
-" enable mouse
-set mouse=a
+" colorscheme
+colorscheme molokai
 
-" disable line wrapping
-set nowrap
+" trick tmux into using vim background color
+set t_ut=
+" set 256 colors
+set t_Co=256
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -29,8 +35,18 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" enable mouse
+set mouse=a
+
+" better autocompletion
+set wildmenu
+set wildmode=longest:full,full
+
 " enable syntax highlighting
 syntax on
+
+" disable line wrapping
+set nowrap
 
 " show line numbers relative to current line
 set number
@@ -41,16 +57,6 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set cindent
-
-" change Y behavior to yank from cursor to end of line
-"nnoremap Y y$
-
-" trick tmux into using vim background color
-set t_ut=
-" set 256 colors
-set t_Co=256
-" make vim pretty
-colorscheme molokai
 
 " highlight cursor
 set cursorline

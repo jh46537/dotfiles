@@ -9,11 +9,14 @@ case $- in
 esac
 
 #### CUSTOM ####
+stty -ixon
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-bind '"\C-b": beginning-of-line'
 export EDITOR=vim
 export VISUAL=vim
+bind "TAB:menu-complete"
+bind "set show-all-if-ambiguous on"
+bind "set menu-complete-display-prefix on"
 #### CUSTOM ####
 
 # terminal settings
