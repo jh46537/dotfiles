@@ -1,5 +1,5 @@
 " set timeout
-set timeoutlen=500 ttimeoutlen=0
+set timeoutlen=250 ttimeoutlen=0
 
 " set leader
 map <space> <leader>
@@ -16,6 +16,8 @@ inoremap <tab><tab> <esc>`^
 nnoremap <leader>/ :noh<cr>
 " enable replace of search term
 nnoremap <leader>r :%s//
+" spell check
+nnoremap <leader>p :set spell!<cr>
 " write
 nnoremap <leader>w :w<cr>
 " quit
