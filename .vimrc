@@ -20,8 +20,10 @@ nnoremap <leader>r :%s//
 nnoremap <leader>p :set spell!<cr>
 " write
 nnoremap <leader>w :w<cr>
+nnoremap <leader>W :wa<cr>
 " quit
 nnoremap <leader>q :q<cr>
+nnoremap <leader>Q :qa<cr>
 
 " colorscheme
 colorscheme molokai
