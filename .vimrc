@@ -1,3 +1,6 @@
+source /usr/share/vim/vimrc
+let &runtimepath.=',~/alex/dotfiles/.vim'
+
 " set timeout
 set timeoutlen=250 ttimeoutlen=0
 

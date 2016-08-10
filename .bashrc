@@ -9,6 +9,14 @@ case $- in
 esac
 
 #### CUSTOM ####
+. /etc/bash.bashrc
+dot_path="/home/$USER/alex/dotfiles"
+export SHELL="bash --init-file $dot_path/.bashrc"
+alias bash="$SHELL"
+export HISTFILE="$dot_path/.bash_history"
+alias vim="vim -u $dot_path/.vimrc"
+alias tmux="tmux -f $dot_path/.tmux.conf"
+export GIT_CONFIG="$dot_path/.gitconfig"
 stty -ixon
 set -o vi
 export LANG="en_US.UTF-8"
