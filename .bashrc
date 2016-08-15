@@ -26,7 +26,7 @@ bind -m vi-insert '"\e[Z": vi-movement-mode'
 bind -m vi-insert '"\C-l": clear-screen'
 bind -m vi-insert -u forward-search-history
 bind -m vi-insert -u reverse-search-history
-bind -m vi-insert '"\C-t": forward-search-history'
+bind -m vi-insert '"\C-f": forward-search-history'
 bind -m vi-insert '"\C-r": reverse-search-history'
 bind -m vi-insert -u beginning-of-line
 bind -m vi-insert -u end-of-line
