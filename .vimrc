@@ -11,6 +11,8 @@ vnoremap <tab><tab> <esc>gV
 onoremap <tab><tab> <esc>
 inoremap <tab><tab> <esc>`^
 
+" disable ex mode
+nnoremap Q <nop>
 " leader things
 " easy unhighlighting
 nnoremap <leader>/ :noh<cr>
