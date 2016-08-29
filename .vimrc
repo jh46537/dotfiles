@@ -17,12 +17,14 @@ inoremap <tab><tab> <esc>`^
 " disable ex mode
 nnoremap Q <nop>
 " leader things
-" easy unhighlighting
-nnoremap <leader>/ :noh<cr>
+" highlighting toggle
+nnoremap <leader>/ :set hls!<cr>
 " enable replace of search term
 nnoremap <leader>r :%s//
-" spell check
+" spell check toggle
 nnoremap <leader>p :set spell!<cr>
+" line number toggle
+nnoremap <leader>n :set nu!<cr>
 " write
 nnoremap <leader>w :w<cr>
 nnoremap <leader>W :wa<cr>
