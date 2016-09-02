@@ -18,7 +18,7 @@ inoremap <tab><tab> <esc>`^
 nnoremap Q <nop>
 " leader things
 " highlighting toggle
-nnoremap <leader>/ :set hls!<cr>
+nnoremap <leader>/ :noh<cr>
 " enable replace of search term
 nnoremap <leader>r :%s//
 " spell check toggle
