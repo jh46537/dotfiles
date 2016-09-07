@@ -75,6 +75,9 @@ set cindent
 " highlight cursor
 set cursorline
 
+" help keep lines short <120
+let &colorcolumn=join(range(121,999),",")
+
 " buffer lines when scrolling
 set scrolloff=2
 
