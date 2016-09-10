@@ -22,6 +22,15 @@ nnoremap <leader>r :%s//
 nnoremap <leader>p :set spell!<cr>
 " line number toggle
 nnoremap <leader>n :set nu!<cr>
+" color column toggle
+function! g:Toggle_colorcolumn()
+    if &colorcolumn != ''
+        set colorcolumn=
+    else
+        let &colorcolumn="81,".join(range(121,999),",")
+    endif
+endfunction
+nnoremap <leader>c :call g:Toggle_colorcolumn()<cr>
 " write
 nnoremap <leader>w :w<cr>
 nnoremap <leader>W :wa<cr>
@@ -71,9 +80,6 @@ set cindent
 
 " highlight cursor
 set cursorline
-
-" help keep lines short <120
-let &colorcolumn=join(range(121,999),",")
 
 " buffer lines when scrolling
 set scrolloff=2
