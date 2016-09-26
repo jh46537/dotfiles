@@ -15,13 +15,13 @@ inoremap <tab><tab> <esc>`^
 nnoremap Q <nop>
 " leader things
 " highlighting toggle
-nnoremap <leader>/ :noh<cr>
+nnoremap <leader>/ :nohlsearch<cr>
 " enable replace of search term
 nnoremap <leader>r :%s//
 " spell check toggle
 nnoremap <leader>p :set spell!<cr>
 " line number toggle
-nnoremap <leader>n :set nu!<cr>
+nnoremap <leader>n :set number!<cr>
 " color column toggle
 function! g:Toggle_colorcolumn()
     if &colorcolumn != ''
