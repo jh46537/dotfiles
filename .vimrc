@@ -1,5 +1,6 @@
 " set timeout
 set timeoutlen=250 ttimeoutlen=0
+set updatetime=250
 
 " set leader
 map <space> <leader>
@@ -37,6 +38,10 @@ nnoremap <leader>W :wa<cr>
 " quit
 nnoremap <leader>q :q<cr>
 nnoremap <leader>Q :qa<cr>
+
+" auto reload
+set autoread
+autocmd CursorHold * checktime
 
 " colorscheme
 colorscheme molokai
