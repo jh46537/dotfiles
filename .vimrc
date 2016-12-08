@@ -17,6 +17,8 @@ nnoremap Q <nop>
 " leader things
 " highlighting toggle
 nnoremap <leader>/ :nohlsearch<cr>
+" search for visually selected text
+vnoremap <leader>s y/<C-R>"<CR>
 " enable replace of search term
 nnoremap <leader>r :%s//
 " spell check toggle
