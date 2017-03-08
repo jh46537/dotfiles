@@ -34,6 +34,8 @@ function! g:Toggle_colorcolumn()
     endif
 endfunction
 nnoremap <leader>c :call g:Toggle_colorcolumn()<cr>
+" reindent
+nnoremap <leader>= mzgg=G`z
 " write
 nnoremap <leader>w :w<cr>
 nnoremap <leader>W :wa<cr>
