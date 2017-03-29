@@ -3,6 +3,7 @@ let &runtimepath.=',~/alex/dotfiles/.vim'
 
 " set timeout
 set timeoutlen=250 ttimeoutlen=0
+set updatetime=250
 
 " set leader
 map <space> <leader>
@@ -19,6 +20,8 @@ nnoremap Q <nop>
 " leader things
 " highlighting toggle
 nnoremap <leader>/ :nohlsearch<cr>
+" search for visually selected text
+vnoremap <leader>s y/<C-R>"<CR>
 " enable replace of search term
 nnoremap <leader>r :%s//
 " spell check toggle
@@ -34,12 +37,18 @@ function! g:Toggle_colorcolumn()
     endif
 endfunction
 nnoremap <leader>c :call g:Toggle_colorcolumn()<cr>
+" reindent
+nnoremap <leader>= mzgg=G`z
 " write
 nnoremap <leader>w :w<cr>
 nnoremap <leader>W :wa<cr>
 " quit
 nnoremap <leader>q :q<cr>
 nnoremap <leader>Q :qa<cr>
+
+" auto reload
+set autoread
+autocmd CursorHold * checktime
 
 " colorscheme
 colorscheme molokai
