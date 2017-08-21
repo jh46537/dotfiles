@@ -3,6 +3,7 @@
 	email = alex.hsu@utexas.edu
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
 [push]
 	default = simple
 [branch]
