@@ -61,6 +61,9 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" enable filetype plugins
+filetype plugin on
+
 " status line
 set laststatus=2
 
@@ -73,6 +76,9 @@ set wildmode=longest:full,full
 
 " enable syntax highlighting
 syntax on
+
+" improve block matching
+runtime macros/matchit.vim
 
 " disable line wrapping
 set nowrap
