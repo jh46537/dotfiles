@@ -70,6 +70,9 @@ set laststatus=2
 " enable mouse
 set mouse=a
 
+" set backspace-able characters
+set backspace=indent,eol,start
+
 " better autocompletion
 set wildmenu
 set wildmode=longest:full,full
