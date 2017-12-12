@@ -33,6 +33,13 @@ bind -m vi-insert -u beginning-of-line
 bind -m vi-insert -u end-of-line
 bind -m vi-insert '"\C-a": beginning-of-line'
 bind -m vi-insert '"\C-e": end-of-line'
+bind -m vi-insert -u unix-line-discard
+bind -m vi-insert -u backward-kill-line
+bind -m vi-insert -u kill-line
+bind -m vi-insert -u kill-whole-line
+bind -m vi-insert '"\C-u": backward-kill-line'
+bind -m vi-insert '"\C-k": kill-line'
+bind -m vi-insert '"\C-j": kill-whole-line'
 #### BASH SETTINGS ####
 
 #### CUSTOM ####
