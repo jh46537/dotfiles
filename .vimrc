@@ -18,13 +18,17 @@ nnoremap Q <nop>
 " highlighting toggle
 nnoremap <leader>/ :nohlsearch<cr>
 " search for visually selected text
-vnoremap <leader>s y/<C-R>"<CR>
+vnoremap <leader>S y/<C-R>"<CR>
 " enable replace of search term
-nnoremap <leader>r :%s//
+nnoremap <leader>R :%s//
+" ignore case toggle
+nnoremap <leader>i :set ignorecase!<cr>
 " spell check toggle
 nnoremap <leader>p :set spell!<cr>
 " line number toggle
 nnoremap <leader>n :set number!<cr>
+" line wrap toggle
+nnoremap <leader>r :set wrap!<cr>
 " color column toggle
 function! g:Toggle_colorcolumn()
     if &colorcolumn != ''
