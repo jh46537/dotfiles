@@ -65,6 +65,9 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" increase number of tabs"
+set tabpagemax=100
+
 " enable filetype plugins
 filetype plugin on
 
